@@ -41,4 +41,4 @@ def simulations():
     rain_df = pd.DataFrame({'RainfallAmount':list})
     rain_df['RainfallAmount'] += (rain_df['RainfallAmount'] * 0.10)
 
-    return sim_df
+    return rain_df
