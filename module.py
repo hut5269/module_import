@@ -43,5 +43,7 @@ def simulations():
 
     sim_df = pd.read_csv ('Output/Simulation_Files/Collection-Simulation.csv')
     sim_df['RainfallAmount'] = rain_df['RainfallAmount']
+    !rm /content/Output/Simulation_Files/Collection-Simulation.csv
+
     sim_df.to_csv('/content/Output/Simulation_Files/Collection-Simulation.csv', 
                     encoding='utf-8', index=False)
