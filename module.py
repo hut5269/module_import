@@ -1,4 +1,3 @@
-import os
 import pandas as pd
 import numpy as np 
 from google.colab import files
@@ -42,6 +41,4 @@ def simulations():
     rain_df = pd.DataFrame({'RainfallAmount':list})
     rain_df['RainfallAmount'] += (rain_df['RainfallAmount'] * 0.10)
 
-    sim_df = pd.read_csv ('/content/Output/Simulation_Files/Collection-Simulation.csv')
-    sim_df['RainfallAmount'] = rain_df['RainfallAmount']
     return sim_df
