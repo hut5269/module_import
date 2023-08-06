@@ -46,7 +46,7 @@ def simulations():
     sim_df.to_csv('/content/Output/Simulation_Files/Collection-Simulation.csv', 
                     encoding='utf-8', index=False)
 
-def boundary():
+def boundary_temp():
     user_file = file_upload("Upload fill model time series data")
     df = pd.read_csv(user_file)
     simulations = df.Sim.unique().tolist().sort()
