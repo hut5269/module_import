@@ -49,7 +49,7 @@ def simulations():
 def boundary():
     user_file = file_upload("Upload fill model time series data")
     df = pd.read_csv(user_file)
-    simulations = df.Sim.unique().tolist()
-    nodes = df['Node Name'].unique().tolist()
-    print(simulations)
-    print(nodes)
+    simulations = df.Sim.unique().tolist().sort()
+    nodes = df['Node Name'].unique().tolist().sort()
+    BoundarySetStage = pd.DataFrame(simulations,columns =['Names'])
+    print(BoundarySetStage)
