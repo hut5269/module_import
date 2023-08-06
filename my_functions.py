@@ -45,3 +45,11 @@ def simulations():
     sim_df['RainfallAmount'] = rain_df['RainfallAmount']
     sim_df.to_csv('/content/Output/Simulation_Files/Collection-Simulation.csv', 
                     encoding='utf-8', index=False)
+
+def boundary():
+    user_file = file_upload("Upload fill model time series data")
+    df = pd.read_csv(user_file)
+    simulations = df.Sim.unique().tolist()
+    nodes = df['Node Name'].unique().tolist()
+    print(simulations)
+    print(nodes)
