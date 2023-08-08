@@ -60,12 +60,7 @@ def simulations():
             list.extend(list1)
 
     rain_df = pd.DataFrame({'RainfallAmount':list})
-    rain_df['RainfallAmount'] += (rain_df['RainfallAmount'] * 0.10)
-
-    sim_df = pd.read_csv ('Output/Simulation_Files/Collection-Simulation.csv')
-    sim_df['RainfallAmount'] = rain_df['RainfallAmount']
-    sim_df.to_csv('/content/Output/Simulation_Files/Collection-Simulation.csv', 
-                    encoding='utf-8', index=False)
+    return rain_df['RainfallAmount'] += (rain_df['RainfallAmount'] * 0.10)
 
 def boundary():
     # df = pd.read_csv ('/content/Input/Node - Time Series.csv')
