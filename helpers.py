@@ -60,8 +60,9 @@ def simulations():
             list.extend(list1)
 
     rain_df = pd.DataFrame({'RainfallAmount':list})
-    return rain_df['RainfallAmount'] += (rain_df['RainfallAmount'] * 0.10)
-
+    rain_df['RainfallAmount'] += (rain_df['RainfallAmount'] * 0.10)
+    return rain_df
+    
 def boundary():
     # df = pd.read_csv ('/content/Input/Node - Time Series.csv')
     user_file = file_upload("Upload fill model time series data")
